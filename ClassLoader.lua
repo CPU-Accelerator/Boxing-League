@@ -62,6 +62,7 @@ classDetectedText2.Font = Enum.Font.SourceSans
 classDetectedText2.Text = "N/A"
 classDetectedText2.TextColor3 = Color3.fromRGB(255, 255, 255)
 classDetectedText2.TextSize = 44.000
+classDetectedText2.Active = true
 
 bugFindText1.Name = "bugFindText1"
 bugFindText1.Parent = ClassDetectorFrame
@@ -103,6 +104,10 @@ UICorner_42.Parent = loadGuiBTN
 
 if game.PlaceId == "3738115442" then
 	classDetectedText2.Text = "Class C"
+	print("yes")
+elseif game.PlaceId == "4574912733" then
+	classDetectedText2.Text = "Class B"
+	print("yes")
 end
 
 ClassDetectorFrame.Visible = true
@@ -118,6 +123,8 @@ loadGuiBTN.MouseButton1Click:Connect(function()
 		GUI:Destroy()
 	elseif game.PlaceId == "4574912733" then
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/CPU-Accelerator/Boxing-League/main/Boxing-Classes/ClassB.lua"), true))()
+		task.wait(0.4)
+		GUI:Destroy()
 	end
 end)
 
