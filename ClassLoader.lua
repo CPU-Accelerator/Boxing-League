@@ -113,11 +113,11 @@ end)
 
 loadGuiBTN.MouseButton1Click:Connect(function()
 	if game.PlaceId == "3738115442" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/CPU-Accelerator/Boxing-League/main/Boxing-Classes/ClassC.lua"))
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/CPU-Accelerator/Boxing-League/main/Boxing-Classes/ClassC.lua"), true))()
 		task.wait(0.4)
 		GUI:Destroy()
 	elseif game.PlaceId == "4574912733" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/CPU-Accelerator/Boxing-League/main/Boxing-Classes/ClassB.lua"))
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/CPU-Accelerator/Boxing-League/main/Boxing-Classes/ClassB.lua"), true))()
 	end
 end)
 
